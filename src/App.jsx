@@ -2,7 +2,6 @@ import { Contacto } from "./componentes/Contacto.jsx";
 import { Encabezado } from "./componentes/Encabezado.jsx";
 import { Experiencia } from "./componentes/Experiencia.jsx";
 import { Hero } from "./componentes/Hero.jsx";
-import { Pie } from "./componentes/Pie.jsx";
 import { Viajes } from "./componentes/Viajes.jsx";
 import { marca } from "./configuracion/marca.js";
 import { viajes } from "./datos/viajes.js";
@@ -20,7 +19,6 @@ export function App() {
         <Viajes viajes={viajes} whatsapp={marca.whatsapp} />
         <Contacto marca={marca} enlaceGeneral={enlaceGeneral} />
       </main>
-      <Pie nombreMarca={marca.nombre} />
     </>
   );
 }

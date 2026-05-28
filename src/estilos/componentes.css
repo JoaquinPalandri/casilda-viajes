@@ -332,10 +332,3 @@ h2 {
   color: rgba(255, 255, 255, 0.78);
   line-height: 1.65;
 }
-
-.pie {
-  padding: 22px 0 max(22px, env(safe-area-inset-bottom));
-  background: var(--color-texto);
-  color: rgba(255, 255, 255, 0.72);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}

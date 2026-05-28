@@ -121,11 +121,6 @@
     gap: 32px;
   }
 
-  .pie__contenido {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-  }
 }
 
 @media (min-width: 1184px) {

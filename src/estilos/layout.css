@@ -46,8 +46,7 @@
 
 .grilla-intro,
 .grilla-viajes,
-.contacto__contenido,
-.pie__contenido {
+.contacto__contenido {
   display: grid;
 }
 
@@ -62,10 +61,4 @@
 
 .contacto__contenido {
   gap: 26px;
-}
-
-.pie__contenido {
-  gap: 8px;
-  font-size: 0.9rem;
-  line-height: 1.45;
 }

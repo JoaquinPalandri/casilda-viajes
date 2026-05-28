@@ -22,7 +22,6 @@ src/
     Encabezado.jsx
     Experiencia.jsx
     Hero.jsx
-    Pie.jsx
     TarjetaViaje.jsx
     Viajes.jsx
   configuracion/
