@@ -1,0 +1,291 @@
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.marca__isotipo {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  background: var(--color-primario);
+  color: white;
+  border-radius: var(--radio);
+  font-weight: 800;
+}
+
+.marca strong,
+.marca small {
+  display: block;
+}
+
+.marca strong {
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.marca small {
+  margin-top: 2px;
+  color: var(--color-texto-suave);
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.navegacion {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.navegacion a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 10px;
+  color: var(--color-texto-suave);
+  border: 1px solid var(--color-linea);
+  border-radius: var(--radio);
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.navegacion a:active,
+.navegacion a:hover {
+  color: var(--color-texto);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.hero {
+  min-height: calc(100vh - var(--alto-header));
+  display: flex;
+  align-items: end;
+  background-image: var(--imagen-hero);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+@supports (min-height: 100svh) {
+  .hero {
+    min-height: calc(100svh - var(--alto-header));
+  }
+}
+
+.hero__contenido {
+  width: min(100% - (var(--espacio-lateral) * 2), var(--ancho-contenido));
+  margin: 0 auto;
+  padding: 72px 0 42px;
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin: 0;
+  font-size: 3.3rem;
+  line-height: 0.94;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+}
+
+.hero p:not(.etiqueta) {
+  max-width: 590px;
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.hero__acciones {
+  display: grid;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  width: 100%;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: var(--radio);
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.boton--principal {
+  background: var(--color-primario);
+  color: white;
+}
+
+.boton--principal:active,
+.boton--principal:hover {
+  background: var(--color-primario-oscuro);
+}
+
+.boton--secundario {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: white;
+}
+
+.boton--tarjeta {
+  background: var(--color-texto);
+  color: white;
+}
+
+.etiqueta {
+  margin: 0 0 12px;
+  color: var(--color-acento);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.05rem;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.beneficios {
+  display: grid;
+  gap: 12px;
+}
+
+.beneficio {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--color-linea);
+  border-radius: var(--radio);
+}
+
+.beneficio span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(14, 124, 123, 0.1);
+  color: var(--color-primario);
+  border-radius: var(--radio);
+  font-weight: 900;
+}
+
+.beneficio p {
+  margin: 0;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.tarjeta-viaje {
+  overflow: hidden;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-linea);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-media);
+}
+
+.tarjeta-viaje img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: rgba(23, 36, 38, 0.08);
+}
+
+.tarjeta-viaje__flyer {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  object-position: center top;
+  background: #102f43;
+}
+
+.tarjeta-viaje__contenido {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+.tarjeta-viaje__encabezado {
+  display: grid;
+  gap: 8px;
+}
+
+.tarjeta-viaje__encabezado span {
+  width: fit-content;
+  max-width: 100%;
+  padding: 6px 8px;
+  background: rgba(216, 140, 69, 0.16);
+  color: #8a4d16;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.tarjeta-viaje__encabezado strong {
+  font-size: 1.45rem;
+  line-height: 1.05;
+}
+
+.tarjeta-viaje p {
+  margin: 0;
+  color: var(--color-texto-suave);
+  line-height: 1.55;
+}
+
+.tarjeta-viaje__datos {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.tarjeta-viaje__datos div {
+  min-width: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-linea);
+}
+
+.tarjeta-viaje__datos dt {
+  color: var(--color-texto-suave);
+  font-size: 0.74rem;
+}
+
+.tarjeta-viaje__datos dd {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  overflow-wrap: break-word;
+}
+
+.contacto {
+  background: var(--color-texto);
+  color: white;
+}
+
+.contacto p:not(.etiqueta) {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.65;
+}
+
+.pie {
+  padding: 22px 0 max(22px, env(safe-area-inset-bottom));
+  background: var(--color-texto);
+  color: rgba(255, 255, 255, 0.72);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}

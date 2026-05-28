@@ -1,0 +1,114 @@
+@media (min-width: 560px) {
+  :root {
+    --espacio-lateral: 24px;
+    --alto-header: 72px;
+  }
+
+  .encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-inline: var(--espacio-lateral);
+  }
+
+  .navegacion {
+    display: flex;
+    align-items: center;
+  }
+
+  .navegacion a {
+    border-color: transparent;
+  }
+
+  .hero {
+    align-items: center;
+  }
+
+  .hero__contenido {
+    padding: 72px 0 86px;
+  }
+
+  .hero h1 {
+    font-size: 4.8rem;
+  }
+
+  .hero p:not(.etiqueta) {
+    font-size: 1.1rem;
+  }
+
+  .hero__acciones {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .boton {
+    width: auto;
+    min-width: 190px;
+  }
+
+  .tarjeta-viaje__datos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 820px) {
+  :root {
+    --espacio-lateral: 32px;
+  }
+
+  .seccion {
+    padding: 82px 0;
+  }
+
+  .grilla-intro {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 48px;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  .seccion__cabecera {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 34px;
+  }
+
+  .grilla-viajes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .tarjeta-viaje__contenido {
+    padding: 18px;
+  }
+
+  .tarjeta-viaje p {
+    min-height: 76px;
+  }
+
+  .contacto__contenido {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .pie__contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1184px) {
+  .encabezado {
+    padding-inline: calc((100vw - var(--ancho-contenido)) / 2);
+  }
+
+  .hero h1 {
+    font-size: 7rem;
+  }
+}

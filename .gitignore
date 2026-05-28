@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.DS_Store
+npm-debug.log*
+
+# Variables locales y datos sensibles
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Editor / sistema
+.vscode/
+.idea/
