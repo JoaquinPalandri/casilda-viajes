@@ -171,6 +171,14 @@ en un botón público. Cualquier visitante puede verlo en el enlace final. Para
 producción conviene usar un número comercial de la agencia, no un número
 personal.
 
+Para GitHub Pages, cargar el mismo valor como variable del repositorio:
+
+```txt
+Settings > Secrets and variables > Actions > Variables
+Name: VITE_WHATSAPP_NUMERO
+Value: 5490000000000
+```
+
 ## Preparado Para Backoffice
 
 Cuando haya backoffice, `src/datos/viajes.js` puede reemplazarse por datos de:
@@ -223,6 +231,24 @@ npm run build
 ```
 
 Esto crea la carpeta `dist/`, que es la versión final para subir a hosting.
+
+## Publicar En GitHub Pages
+
+El proyecto incluye un workflow en `.github/workflows/deploy.yml`.
+
+Para verlo público:
+
+1. Pushear los cambios a GitHub.
+2. Configurar la variable `VITE_WHATSAPP_NUMERO` en `Settings > Secrets and variables > Actions > Variables`.
+3. En GitHub, entrar a `Settings > Pages`.
+4. En `Build and deployment`, elegir `GitHub Actions`.
+5. Ejecutar o esperar el workflow `Deploy GitHub Pages`.
+
+URL esperada:
+
+```txt
+https://joaquinpalandri.github.io/casilda-viajes/
+```
 
 ## Reutilizar Para Otra Empresa
 

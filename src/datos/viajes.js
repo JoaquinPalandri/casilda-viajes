@@ -1,7 +1,9 @@
+import { crearRutaPublica } from "../utilidades/rutas.js";
+
 export const viajes = [
   {
     destino: "Mendoza, San Rafael y Las Leñas",
-    imagen: "/viajes/mendoza-san-rafael-las-lenas.jpg",
+    imagen: crearRutaPublica("/viajes/mendoza-san-rafael-las-lenas.jpg"),
     destacado: "Ver flyer completo",
     resumen:
       "Salida desde Rosario con bus mix, asistencia incluida, coordinación permanente y traslado a Las Leñas.",
@@ -20,7 +22,7 @@ export const viajes = [
   },
   {
     destino: "Puerto Madryn",
-    imagen: "/viajes/puerto-madryn.jpg",
+    imagen: crearRutaPublica("/viajes/puerto-madryn.jpg"),
     destacado: "Ver flyer completo",
     resumen:
       "Salida desde Rosario con hotel Gran Madryn, desayuno, excursiones, asistencia incluida y coordinación permanente.",
@@ -41,7 +43,7 @@ export const viajes = [
   },
   {
     destino: "Caminos del Norte",
-    imagen: "/viajes/caminos-del-norte.jpg",
+    imagen: crearRutaPublica("/viajes/caminos-del-norte.jpg"),
     destacado: "Ver flyer completo",
     resumen:
       "Salida desde Rosario con hotel Carlos I, III o IV, régimen media pensión, excursiones y asistencia incluida.",

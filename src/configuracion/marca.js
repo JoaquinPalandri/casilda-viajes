@@ -1,7 +1,9 @@
+import { crearRutaPublica } from "../utilidades/rutas.js";
+
 export const marca = {
   nombre: "AgroGroup Turismo",
   iniciales: "AG",
-  logo: "/marca/logo-agrogroup-turismo.png",
+  logo: crearRutaPublica("/marca/logo-agrogroup-turismo.png"),
   eslogan: "Viajes que inspiran, recuerdos que perduran",
   rubro: "Agencia de viajes",
   whatsapp: import.meta.env.VITE_WHATSAPP_NUMERO || "5490000000000",
