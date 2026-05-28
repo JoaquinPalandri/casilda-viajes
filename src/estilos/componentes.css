@@ -1,21 +1,19 @@
 .marca {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-width: 0;
   text-decoration: none;
 }
 
-.marca__isotipo {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
+.marca__logo {
+  width: 52px;
+  height: 52px;
   flex: 0 0 auto;
-  background: var(--color-primario);
-  color: white;
-  border-radius: var(--radio);
-  font-weight: 800;
+  border: 2px solid rgba(216, 140, 69, 0.75);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(23, 36, 38, 0.2);
 }
 
 .marca strong,
@@ -24,21 +22,92 @@
 }
 
 .marca strong {
+  color: var(--color-texto);
   font-size: 1rem;
   line-height: 1.15;
 }
 
 .marca small {
-  margin-top: 2px;
+  display: none;
+  max-width: 230px;
+  margin-top: 4px;
   color: var(--color-texto-suave);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   line-height: 1.2;
 }
 
+.menu-boton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radio);
+  color: var(--color-texto);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.menu-boton__linea {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 999px;
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
+.menu-boton__linea:nth-child(1) {
+  transform: translateY(-7px);
+}
+
+.menu-boton__linea:nth-child(3) {
+  transform: translateY(7px);
+}
+
+.menu-boton:active,
+.menu-boton:hover {
+  background: rgba(23, 36, 38, 0.06);
+}
+
+.menu-boton:focus-visible {
+  outline: 2px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+.encabezado--abierto .menu-boton {
+  background: rgba(23, 36, 38, 0.07);
+  color: var(--color-texto);
+}
+
+.encabezado--abierto .menu-boton__linea:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.encabezado--abierto .menu-boton__linea:nth-child(2) {
+  opacity: 0;
+}
+
+.encabezado--abierto .menu-boton__linea:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
 .navegacion {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
+}
+
+.encabezado--abierto .navegacion {
+  display: grid;
 }
 
 .navegacion a {
@@ -199,11 +268,18 @@ h2 {
   box-shadow: var(--sombra-media);
 }
 
-.tarjeta-viaje img {
+.tarjeta-viaje__imagen {
+  display: block;
+  background: #102f43;
+}
+
+.tarjeta-viaje__imagen:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: -3px;
+}
+
+.tarjeta-viaje__imagen img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background: rgba(23, 36, 38, 0.08);
 }
 
 .tarjeta-viaje__flyer {
@@ -237,39 +313,13 @@ h2 {
   text-transform: uppercase;
 }
 
-.tarjeta-viaje__encabezado strong {
+.tarjeta-viaje__titulo {
+  display: block;
+  min-height: 3.16rem;
   font-size: 1.45rem;
-  line-height: 1.05;
-}
-
-.tarjeta-viaje p {
-  margin: 0;
-  color: var(--color-texto-suave);
-  line-height: 1.55;
-}
-
-.tarjeta-viaje__datos {
-  display: grid;
-  gap: 8px;
-  margin: 0;
-}
-
-.tarjeta-viaje__datos div {
-  min-width: 0;
-  padding-top: 10px;
-  border-top: 1px solid var(--color-linea);
-}
-
-.tarjeta-viaje__datos dt {
-  color: var(--color-texto-suave);
-  font-size: 0.74rem;
-}
-
-.tarjeta-viaje__datos dd {
-  margin: 4px 0 0;
-  font-size: 0.9rem;
-  font-weight: 800;
-  overflow-wrap: break-word;
+  line-height: 1.09;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 .contacto {

@@ -1,13 +1,14 @@
 export const marca = {
-  nombre: "Casilda Viajes",
-  iniciales: "CV",
-  eslogan: "Viajes simples, recuerdos enormes",
+  nombre: "AgroGroup Turismo",
+  iniciales: "AG",
+  logo: "/marca/logo-agrogroup-turismo.png",
+  eslogan: "Viajes que inspiran, recuerdos que perduran",
   rubro: "Agencia de viajes",
   whatsapp: import.meta.env.VITE_WHATSAPP_NUMERO || "5490000000000",
   mensajeGeneral:
     "Hola, quiero recibir informacion sobre los viajes disponibles.",
   hero: {
-    titulo: "Casilda Viajes",
+    titulo: "AgroGroup Turismo",
     descripcion:
       "Escapadas, playas y experiencias pensadas para viajar con confianza, atencion cercana y propuestas listas para consultar por WhatsApp.",
     imagen:

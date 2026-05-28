@@ -1,4 +1,4 @@
-# Casilda Viajes
+# AgroGroup Turismo
 
 Pagina vidriera mobile first hecha con React + Vite para publicar viajes,
 mostrar flyers comerciales y derivar consultas a WhatsApp.
@@ -39,6 +39,7 @@ src/
   utilidades/
     whatsapp.js
 public/
+  marca/
   viajes/
 index.html
 package.json
@@ -82,6 +83,8 @@ luego se agregan mejoras con `min-width`.
   `src/datos/viajes.js`
 - Subir flyers de viajes:
   `public/viajes/`
+- Cambiar logo:
+  `public/marca/` y la propiedad `logo` en `src/configuracion/marca.js`
 - Cambiar colores, espaciado y apariencia:
   `src/estilos/tokens.css` y `src/estilos/componentes.css`
 - Cambiar SEO basico:
@@ -89,7 +92,7 @@ luego se agregan mejoras con `min-width`.
 
 ## Agregar un viaje
 
-1. Copiar la imagen dentro de `public/viajes/`.
+1. Copiar el flyer dentro de `public/viajes/`.
 2. Agregar un objeto en `src/datos/viajes.js`.
 3. Usar una ruta publica empezando con `/viajes/`.
 
@@ -98,14 +101,26 @@ Ejemplo:
 ```js
 {
   destino: "Nuevo destino",
-  resumen: "Descripcion breve de venta.",
-  fecha: "15 Jul 2026",
-  duracion: "3 noches",
-  precio: "$ 000.000",
   imagen: "/viajes/nuevo-destino.jpg",
-  destacado: "Reserva tu lugar",
+  destacado: "Ver flyer completo",
+  resumen: "Descripcion interna o futura descripcion visible.",
+  detalles: {
+    fecha: "15 Jul 2026",
+    duracion: "3 noches",
+    precio: "$ 000.000",
+    origen: "Rosario",
+    hotel: "Hotel ejemplo",
+    servicios: ["Bus mix", "Asistencia incluida"],
+  },
 }
 ```
+
+La informacion comercial detallada vive en el flyer. La web solo muestra la
+publicacion, permite abrirla completa y deriva la consulta a WhatsApp.
+
+El modelo igualmente conserva `resumen` y `detalles` para escalar a backoffice:
+cuando el cliente cargue fecha, precio, hotel o servicios desde un panel, la UI
+puede empezar a mostrar esos campos sin cambiar la estructura base.
 
 ## Numero de WhatsApp
 

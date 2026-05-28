@@ -1,24 +1,5 @@
 import { crearEnlaceWhatsapp, crearMensajeViaje } from "../utilidades/whatsapp.js";
 
-function DatosViaje({ viaje }) {
-  const datos = [
-    { etiqueta: "Fecha", valor: viaje.fecha },
-    { etiqueta: "Duracion", valor: viaje.duracion },
-    { etiqueta: "Precio", valor: viaje.precio },
-  ];
-
-  return (
-    <dl className="tarjeta-viaje__datos">
-      {datos.map((dato) => (
-        <div key={dato.etiqueta}>
-          <dt>{dato.etiqueta}</dt>
-          <dd>{dato.valor}</dd>
-        </div>
-      ))}
-    </dl>
-  );
-}
-
 export function TarjetaViaje({ viaje, whatsapp }) {
   const enlaceConsulta = crearEnlaceWhatsapp(
     whatsapp,
@@ -27,19 +8,25 @@ export function TarjetaViaje({ viaje, whatsapp }) {
 
   return (
     <article className="tarjeta-viaje">
-      <img
-        className="tarjeta-viaje__flyer"
-        src={viaje.imagen}
-        alt={`Flyer promocional de ${viaje.destino}`}
-        loading="lazy"
-      />
+      <a
+        className="tarjeta-viaje__imagen"
+        href={viaje.imagen}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`Abrir flyer completo de ${viaje.destino}`}
+      >
+        <img
+          className="tarjeta-viaje__flyer"
+          src={viaje.imagen}
+          alt={`Flyer promocional de ${viaje.destino}`}
+          loading="lazy"
+        />
+      </a>
       <div className="tarjeta-viaje__contenido">
         <div className="tarjeta-viaje__encabezado">
           <span>{viaje.destacado}</span>
-          <strong>{viaje.destino}</strong>
+          <strong className="tarjeta-viaje__titulo">{viaje.destino}</strong>
         </div>
-        <p>{viaje.resumen}</p>
-        <DatosViaje viaje={viaje} />
         <a
           className="boton boton--tarjeta"
           href={enlaceConsulta}

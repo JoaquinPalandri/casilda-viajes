@@ -1,15 +1,16 @@
 @media (min-width: 560px) {
   :root {
     --espacio-lateral: 24px;
-    --alto-header: 72px;
+    --alto-header: 84px;
   }
 
   .encabezado {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 24px;
     padding-inline: var(--espacio-lateral);
+  }
+
+  .encabezado__barra {
+    width: 100%;
   }
 
   .navegacion {
@@ -19,6 +20,19 @@
 
   .navegacion a {
     border-color: transparent;
+  }
+
+  .marca__logo {
+    width: 76px;
+    height: 76px;
+  }
+
+  .marca strong {
+    font-size: 1.18rem;
+  }
+
+  .marca small {
+    display: block;
   }
 
   .hero {
@@ -47,9 +61,6 @@
     min-width: 190px;
   }
 
-  .tarjeta-viaje__datos {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 820px) {
@@ -59,6 +70,24 @@
 
   .seccion {
     padding: 82px 0;
+  }
+
+  .encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .encabezado__barra {
+    width: auto;
+  }
+
+  .menu-boton {
+    display: none;
+  }
+
+  .navegacion {
+    display: flex;
   }
 
   .grilla-intro {
@@ -84,10 +113,6 @@
 
   .tarjeta-viaje__contenido {
     padding: 18px;
-  }
-
-  .tarjeta-viaje p {
-    min-height: 76px;
   }
 
   .contacto__contenido {

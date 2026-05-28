@@ -3,5 +3,15 @@ export function crearEnlaceWhatsapp(numero, mensaje) {
 }
 
 export function crearMensajeViaje(viaje) {
-  return `Hola, quiero recibir mas informacion sobre ${viaje.destino}. Fecha: ${viaje.fecha}. Precio publicado: ${viaje.precio}.`;
+  const partes = [`Hola, quiero recibir mas informacion sobre el viaje ${viaje.destino}.`];
+
+  if (viaje.detalles?.fecha) {
+    partes.push(`Fecha publicada: ${viaje.detalles.fecha}.`);
+  }
+
+  if (viaje.detalles?.precio) {
+    partes.push(`Precio publicado: ${viaje.detalles.precio}.`);
+  }
+
+  return partes.join(" ");
 }

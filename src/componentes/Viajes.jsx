@@ -1,7 +1,7 @@
 import { TarjetaViaje } from "./TarjetaViaje.jsx";
 
 const resumenViajes =
-  "Publicaciones listas para vender. Cambiando el archivo de datos se actualizan imagen, fecha, precio y consulta por WhatsApp.";
+  "Toca una publicacion para verla completa o escribinos por WhatsApp para reservar tu lugar.";
 
 export function Viajes({ viajes, whatsapp }) {
   return (
@@ -18,7 +18,7 @@ export function Viajes({ viajes, whatsapp }) {
         <div className="grilla-viajes">
           {viajes.map((viaje) => (
             <TarjetaViaje
-              key={`${viaje.destino}-${viaje.fecha}`}
+              key={viaje.destino}
               viaje={viaje}
               whatsapp={whatsapp}
             />
