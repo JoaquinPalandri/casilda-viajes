@@ -3,7 +3,7 @@ export function Experiencia({ confianza }) {
     <section className="seccion seccion--intro" id="experiencia">
       <div className="contenedor grilla-intro">
         <div>
-          <p className="etiqueta">Por que elegirnos</p>
+          <p className="etiqueta">Por qué elegirnos</p>
           <h2>{confianza.titulo}</h2>
         </div>
         <div className="beneficios">

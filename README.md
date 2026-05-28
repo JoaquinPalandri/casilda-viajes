@@ -1,14 +1,14 @@
 # AgroGroup Turismo
 
-Pagina vidriera mobile first hecha con React + Vite para publicar viajes,
+Página vidriera mobile first hecha con React + Vite para publicar viajes,
 mostrar flyers comerciales y derivar consultas a WhatsApp.
 
 ## Objetivo
 
-El proyecto esta pensado para empezar simple y poder escalar:
+El proyecto está pensado para empezar simple y poder escalar:
 
-- Hoy: los viajes se cargan a mano editando datos e imagenes.
-- Despues: el mismo listado puede venir de un backoffice, CMS o base de datos.
+- Hoy: los viajes se cargan a mano editando datos e imágenes.
+- Después: el mismo listado puede venir de un backoffice, CMS o base de datos.
 - La marca puede cambiarse para reutilizar la base con otra empresa.
 
 ## Estructura
@@ -49,21 +49,21 @@ vite.config.js
 ## Responsabilidades
 
 - `src/main.jsx`: punto de entrada de React. Monta la app en `#root`.
-- `src/App.jsx`: compone las secciones principales de la pagina.
+- `src/App.jsx`: compone las secciones principales de la página.
 - `src/componentes/`: elementos visuales reutilizables de la interfaz.
 - `src/configuracion/marca.js`: datos de marca, WhatsApp, hero y textos globales.
 - `src/datos/viajes.js`: listado editable de viajes publicados.
 - `src/utilidades/whatsapp.js`: armado centralizado de enlaces y mensajes de WhatsApp.
 - `src/estilos/base.css`: archivo principal que importa las capas CSS.
-- `public/viajes/`: imagenes/flyers que se publican en las tarjetas.
+- `public/viajes/`: imágenes/flyers que se publican en las tarjetas.
 
 ## Estilos
 
-Los estilos estan separados por capas para que escalen sin volverse un archivo
+Los estilos están separados por capas para que escalen sin volverse un archivo
 gigante:
 
 - `tokens.css`: colores, radios, sombras, anchos y variables globales.
-- `reset.css`: normalizacion basica de HTML, body, links, imagenes y tipografia.
+- `reset.css`: normalización básica de HTML, body, links, imágenes y tipografía.
 - `layout.css`: contenedores, secciones y grillas generales.
 - `componentes.css`: clases de componentes visuales como header, botones, hero y tarjetas.
 - `responsive.css`: media queries mobile first para tablet y desktop.
@@ -72,11 +72,45 @@ gigante:
 El enfoque es mobile first: primero se definen estilos para Android/iOS web y
 luego se agregan mejoras con `min-width`.
 
-## Donde editar
+### Theme Visual
 
-- Cambiar marca, numero de WhatsApp y textos principales:
+La identidad visual usa una base moderna, premium y turística:
+
+- Blanco y fondos claros para limpieza.
+- Azul oscuro como contraste confiable.
+- Dorado solo como acento en botones principales, badges, foco y detalles.
+- Negro/gris para texto y jerarquía.
+- Inter como tipografía principal.
+- Montserrat como tipografía opcional para títulos.
+
+Escala tipográfica definida en `src/estilos/tokens.css`:
+
+- `--font-size-hero`: 34px
+- `--font-size-title`: 26px
+- `--font-size-section-title`: 22px
+- `--font-size-card-title`: 18px
+- `--font-size-body`: 16px
+- `--font-size-caption`: 12px
+
+Pesos:
+
+- Títulos: 700
+- Subtítulos/cards: 600
+- Botones: 600
+- Texto común: 400
+- Labels: 500
+
+Componentes:
+
+- Cards con `--radius-card` de 18px, fondo blanco, borde `#E7E2D8`, padding 16 y sombra sutil.
+- Botones principales de 48px de alto, radio 14, font size 16 y peso 600.
+- Espaciados globales definidos con tokens `--space-*`.
+
+## Dónde Editar
+
+- Cambiar marca, número de WhatsApp y textos principales:
   `src/configuracion/marca.js`
-- Cambiar el numero real de WhatsApp en tu maquina:
+- Cambiar el número real de WhatsApp en tu máquina:
   `.env`
 - Agregar, quitar o editar viajes:
   `src/datos/viajes.js`
@@ -86,14 +120,14 @@ luego se agregan mejoras con `min-width`.
   `public/marca/` y la propiedad `logo` en `src/configuracion/marca.js`
 - Cambiar colores, espaciado y apariencia:
   `src/estilos/tokens.css` y `src/estilos/componentes.css`
-- Cambiar SEO basico:
+- Cambiar SEO básico:
   `index.html`
 
-## Agregar un viaje
+## Agregar Un Viaje
 
 1. Copiar el flyer dentro de `public/viajes/`.
 2. Agregar un objeto en `src/datos/viajes.js`.
-3. Usar una ruta publica empezando con `/viajes/`.
+3. Usar una ruta pública empezando con `/viajes/`.
 
 Ejemplo:
 
@@ -102,7 +136,7 @@ Ejemplo:
   destino: "Nuevo destino",
   imagen: "/viajes/nuevo-destino.jpg",
   destacado: "Ver flyer completo",
-  resumen: "Descripcion interna o futura descripcion visible.",
+  resumen: "Descripción interna o futura descripción visible.",
   detalles: {
     fecha: "15 Jul 2026",
     duracion: "3 noches",
@@ -114,30 +148,30 @@ Ejemplo:
 }
 ```
 
-La informacion comercial detallada vive en el flyer. La web solo muestra la
-publicacion, permite abrirla completa y deriva la consulta a WhatsApp.
+La información comercial detallada vive en el flyer. La web solo muestra la
+publicación, permite abrirla completa y deriva la consulta a WhatsApp.
 
 El modelo igualmente conserva `resumen` y `detalles` para escalar a backoffice:
 cuando el cliente cargue fecha, precio, hotel o servicios desde un panel, la UI
 puede empezar a mostrar esos campos sin cambiar la estructura base.
 
-## Numero de WhatsApp
+## Número De WhatsApp
 
-El numero real se lee desde `.env`:
+El número real se lee desde `.env`:
 
 ```txt
 VITE_WHATSAPP_NUMERO=5490000000000
 ```
 
-Ese archivo esta ignorado por git para no subir datos personales o de entorno.
+Ese archivo está ignorado por git para no subir datos personales o de entorno.
 El repo incluye `.env.example` como plantilla.
 
-Importante: en una web frontend el numero de WhatsApp no es secreto si se usa
-en un boton publico. Cualquier visitante puede verlo en el enlace final. Para
-produccion conviene usar un numero comercial de la agencia, no un numero
+Importante: en una web frontend el número de WhatsApp no es secreto si se usa
+en un botón público. Cualquier visitante puede verlo en el enlace final. Para
+producción conviene usar un número comercial de la agencia, no un número
 personal.
 
-## Preparado para backoffice
+## Preparado Para Backoffice
 
 Cuando haya backoffice, `src/datos/viajes.js` puede reemplazarse por datos de:
 
@@ -147,22 +181,22 @@ Cuando haya backoffice, `src/datos/viajes.js` puede reemplazarse por datos de:
 - Airtable/Google Sheets,
 - o cualquier panel administrativo.
 
-La UI no deberia cambiar: `Viajes.jsx` solo necesita recibir un array con la
+La UI no debería cambiar: `Viajes.jsx` solo necesita recibir un array con la
 misma forma de datos.
 
-## Donde no editar
+## Dónde No Editar
 
 - `dist/`: lo genera Vite con `npm run build`.
 - `node_modules/`: dependencias instaladas por `npm install`.
-- `.env`: variables locales como el numero real de WhatsApp.
+- `.env`: variables locales como el número real de WhatsApp.
 
 Si hay que cambiar textos, viajes, fotos o estilos, hacerlo siempre en `src/`,
 `public/` o `index.html`, nunca en `dist/`.
 
-`dist/` y `node_modules/` estan ignorados en `.gitignore` porque no son codigo
+`dist/` y `node_modules/` están ignorados en `.gitignore` porque no son código
 fuente.
 
-## Ejecutar localmente
+## Ejecutar Localmente
 
 Instalar dependencias:
 
@@ -182,18 +216,18 @@ Abrir en Chrome:
 http://127.0.0.1:5173/
 ```
 
-## Generar version publicable
+## Generar Versión Publicable
 
 ```bash
 npm run build
 ```
 
-Esto crea la carpeta `dist/`, que es la version final para subir a hosting.
+Esto crea la carpeta `dist/`, que es la versión final para subir a hosting.
 
-## Reutilizar para otra empresa
+## Reutilizar Para Otra Empresa
 
 1. Cambiar `src/configuracion/marca.js`.
 2. Reemplazar `src/datos/viajes.js`.
-3. Reemplazar imagenes dentro de `public/viajes/`.
+3. Reemplazar imágenes dentro de `public/viajes/`.
 4. Ajustar variables de marca en `src/estilos/tokens.css`.
-5. Cambiar titulo y descripcion SEO en `index.html`.
+5. Cambiar título y descripción SEO en `index.html`.

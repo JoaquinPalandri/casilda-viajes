@@ -3,8 +3,8 @@ export function Contacto({ marca, enlaceGeneral }) {
     <section className="seccion contacto" id="contacto">
       <div className="contenedor contacto__contenido">
         <div>
-          <p className="etiqueta">Atencion personalizada</p>
-          <h2>Armemos tu proxima salida.</h2>
+          <p className="etiqueta">Atención personalizada</p>
+          <h2>Armemos tu próxima salida.</h2>
           <p>{marca.contacto.texto}</p>
         </div>
         <a

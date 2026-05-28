@@ -13,6 +13,8 @@ body {
   min-width: 320px;
   background: var(--color-fondo);
   color: var(--color-texto);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }

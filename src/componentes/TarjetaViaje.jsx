@@ -33,7 +33,7 @@ export function TarjetaViaje({ viaje, whatsapp }) {
           target="_blank"
           rel="noreferrer"
         >
-          Pedir informacion
+          Pedir información
         </a>
       </div>
     </article>

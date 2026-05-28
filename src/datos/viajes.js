@@ -1,10 +1,10 @@
 export const viajes = [
   {
-    destino: "Mendoza, San Rafael y Las Lenas",
+    destino: "Mendoza, San Rafael y Las Leñas",
     imagen: "/viajes/mendoza-san-rafael-las-lenas.jpg",
     destacado: "Ver flyer completo",
     resumen:
-      "Salida desde Rosario con bus mix, asistencia incluida, coordinacion permanente y traslado a Las Lenas.",
+      "Salida desde Rosario con bus mix, asistencia incluida, coordinación permanente y traslado a Las Leñas.",
     detalles: {
       fecha: "25 Jun 2026",
       duracion: "4 noches",
@@ -13,8 +13,8 @@ export const viajes = [
       servicios: [
         "Bus mix",
         "Asistencia incluida",
-        "Coordinacion permanente",
-        "Traslado a Las Lenas incluido",
+        "Coordinación permanente",
+        "Traslado a Las Leñas incluido",
       ],
     },
   },
@@ -23,7 +23,7 @@ export const viajes = [
     imagen: "/viajes/puerto-madryn.jpg",
     destacado: "Ver flyer completo",
     resumen:
-      "Salida desde Rosario con hotel Gran Madryn, desayuno, excursiones, asistencia incluida y coordinacion permanente.",
+      "Salida desde Rosario con hotel Gran Madryn, desayuno, excursiones, asistencia incluida y coordinación permanente.",
     detalles: {
       fecha: "11 Jun 2026",
       duracion: "3 noches",
@@ -33,8 +33,8 @@ export const viajes = [
       servicios: [
         "Bus mix",
         "Asistencia incluida",
-        "Coordinacion permanente",
-        "Regimen desayuno",
+        "Coordinación permanente",
+        "Régimen desayuno",
         "Excursiones",
       ],
     },
@@ -44,7 +44,7 @@ export const viajes = [
     imagen: "/viajes/caminos-del-norte.jpg",
     destacado: "Ver flyer completo",
     resumen:
-      "Salida desde Rosario con hotel Carlos I, III o IV, regimen media pension, excursiones y asistencia incluida.",
+      "Salida desde Rosario con hotel Carlos I, III o IV, régimen media pensión, excursiones y asistencia incluida.",
     detalles: {
       fecha: "11 Jun 2026",
       duracion: "3 noches",
@@ -54,8 +54,8 @@ export const viajes = [
       servicios: [
         "Bus mix",
         "Asistencia incluida",
-        "Coordinacion permanente",
-        "Regimen media pension",
+        "Coordinación permanente",
+        "Régimen media pensión",
         "Excursiones",
       ],
     },

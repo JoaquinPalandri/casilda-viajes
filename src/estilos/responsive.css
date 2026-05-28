@@ -28,7 +28,7 @@
   }
 
   .marca strong {
-    font-size: 1.18rem;
+    font-size: var(--font-size-card-title);
   }
 
   .marca small {
@@ -40,15 +40,15 @@
   }
 
   .hero__contenido {
-    padding: 72px 0 86px;
+    padding: var(--space-7) 0 var(--space-7);
   }
 
   .hero h1 {
-    font-size: 4.8rem;
+    font-size: 42px;
   }
 
   .hero p:not(.etiqueta) {
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
   }
 
   .hero__acciones {
@@ -69,7 +69,7 @@
   }
 
   .seccion {
-    padding: 82px 0;
+    padding: var(--space-7) 0;
   }
 
   .encabezado {
@@ -88,6 +88,14 @@
 
   .navegacion {
     display: flex;
+    gap: var(--space-3);
+  }
+
+  .navegacion a {
+    min-height: 48px;
+    padding-inline: var(--space-4);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-button);
   }
 
   .grilla-intro {
@@ -96,23 +104,21 @@
   }
 
   h2 {
-    font-size: 3.2rem;
+    font-size: var(--font-size-title);
   }
 
   .seccion__cabecera {
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 34px;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
   }
 
   .grilla-viajes {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    gap: var(--space-5);
   }
 
   .tarjeta-viaje__contenido {
-    padding: 18px;
+    padding: var(--space-4);
   }
 
   .contacto__contenido {
@@ -129,6 +135,6 @@
   }
 
   .hero h1 {
-    font-size: 7rem;
+    font-size: 52px;
   }
 }

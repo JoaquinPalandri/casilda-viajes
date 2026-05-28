@@ -39,7 +39,7 @@ export function Encabezado({ marca }) {
           type="button"
           aria-expanded={menuAbierto}
           aria-controls="navegacion-principal"
-          aria-label={menuAbierto ? "Cerrar navegacion" : "Abrir navegacion"}
+          aria-label={menuAbierto ? "Cerrar navegación" : "Abrir navegación"}
           onClick={alternarMenu}
         >
           <span className="menu-boton__linea" aria-hidden="true" />
@@ -51,7 +51,7 @@ export function Encabezado({ marca }) {
       <nav
         className="navegacion"
         id="navegacion-principal"
-        aria-label="Navegacion principal"
+        aria-label="Navegación principal"
       >
         {enlacesNavegacion.map((enlace) => (
           <a href={enlace.href} key={enlace.href} onClick={cerrarMenu}>

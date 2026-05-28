@@ -8,11 +8,12 @@
   top: 0;
   z-index: 10;
   display: grid;
-  gap: 10px;
-  padding: 10px var(--espacio-lateral);
-  padding-top: max(10px, env(safe-area-inset-top));
-  background: rgba(247, 244, 238, 0.94);
+  gap: var(--space-2);
+  padding: var(--space-2) var(--espacio-lateral);
+  padding-top: max(var(--space-2), env(safe-area-inset-top));
+  background: rgba(248, 246, 241, 0.96);
   border-bottom: 1px solid var(--color-linea);
+  box-shadow: var(--shadow-header);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -21,11 +22,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: var(--space-3);
 }
 
 .seccion {
-  padding: 58px 0;
+  padding: var(--space-6) 0;
 }
 
 .seccion--intro {
@@ -34,14 +35,15 @@
 
 .seccion__cabecera {
   display: grid;
-  gap: 18px;
-  margin-bottom: 28px;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
 }
 
-.seccion__cabecera p:last-child {
+.seccion__cabecera > p:not(.etiqueta) {
   margin: 0;
   color: var(--color-texto-suave);
-  line-height: 1.65;
+  font-size: var(--font-size-body);
+  line-height: 1.6;
 }
 
 .grilla-intro,
@@ -51,14 +53,14 @@
 }
 
 .grilla-intro {
-  gap: 28px;
+  gap: var(--space-5);
   align-items: start;
 }
 
 .grilla-viajes {
-  gap: 16px;
+  gap: var(--space-5);
 }
 
 .contacto__contenido {
-  gap: 26px;
+  gap: var(--space-5);
 }
